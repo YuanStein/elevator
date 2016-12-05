@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- viewport的<meta>标签，这个标签可以修改在大部分的移动设备上面的显示，为了确保适当的绘制和触屏缩放。-->
-    <title>无标题文档</title>
+    <title>dt</title>
     <!--样式文件引用-->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -41,7 +41,7 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column" style="margin-top:50px ">
-            <ul class="list-group">
+            <ul class="list-group dt">
                 <li class="list-group-item" data-tag="10">
                     <span>10楼</span>
                     <span class="dt-1"></span>
@@ -154,17 +154,29 @@
     var elevator = new Elevator(10,10,1,1);
 
     $('.put-up').click(function(){
-        $(this).addClass('orange');
-        $(this).attr('data-type',1);
-
-        elevator.judge();
+        var type = $(this).attr('data-type');
+        if(type == 0) {
+            $(this).addClass('orange');
+            $(this).attr('data-type', '1');
+            elevator.judge();
+        }else{
+            $(this).removeClass('orange');
+            $(this).attr('data-type', '0');
+            elevator.judge();
+        }
     });
     //下楼按钮
     $('.put-down').click(function(){
-        $(this).addClass('orange');
-        $(this).attr('data-type',1);
-
-        elevator.judge();
+        var type = $(this).attr('data-type');
+        if(type == 0) {
+            $(this).addClass('orange');
+            $(this).attr('data-type', '1');
+            elevator.judge();
+        }else{
+            $(this).removeClass('orange');
+            $(this).attr('data-type', '0');
+            elevator.judge();
+        }
     });
     //楼层选择
     $('.btn-wantto').click(function(){
