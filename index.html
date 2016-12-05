@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport的<meta>标签，这个标签可以修改在大部分的移动设备上面的显示，为了确保适当的绘制和触屏缩放。-->
+    <title>无标题文档</title>
+    <!--样式文件引用-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .dt-1{
+            margin-left:210px;
+        }
+        .btn-move{
+            width:100px;
+            height: 20px;
+            margin:auto;
+            float: right;
+            /*background-color: rebeccapurple;*/
+        }
+        .orange{
+            color:orange;
+        }
+        .btn-sp{
+            margin-left: 69px;
+            border:1px solid;
+            border-radius: 50px;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column" style="margin-top:50px ">
+            <ul class="list-group">
+                <li class="list-group-item" data-tag="10">
+                    <span>10楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <!--<span class="put-up glyphicon glyphicon-upload"></span>&nbsp;&nbsp;-->
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="9">
+                    <span>9楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="8">
+                    <span>8楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="7">
+                    <span>7楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="6">
+                    <span>6楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="5">
+                    <span>5楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="4">
+                    <span>4楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="3">
+                    <span>3楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="2">
+                    <span>2楼</span>
+                    <span class="dt-1"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <span class="put-down glyphicon glyphicon-download" data-type="0"></span>
+                    </div>
+                </li>
+                <li class="list-group-item" data-tag="1">
+                    <span>1楼</span>
+                    <span class="dt-1 glyphicon glyphicon-asterisk"></span>
+                    <span class="dt-2"></span>
+                    <div class="btn-move">
+                        <span class="put-up glyphicon glyphicon-upload" data-type="0"></span>&nbsp;&nbsp;
+                        <!--<span class="put-down glyphicon glyphicon-download"></span>-->
+                    </div>
+                </li>
+            </ul>
+            <div class="col-md-3 column" style="margin-top: 20px;">
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="1">&nbsp;1&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="2">&nbsp;2&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="3">&nbsp;3&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="4">&nbsp;4&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="5">&nbsp;5&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="6">&nbsp;6&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="7">&nbsp;7&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="8">&nbsp;8&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="9">&nbsp;9&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="10">10&nbsp;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--JavaScript插件都是依赖与jQuery库-->
+<script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="elevator.js"></script>
+
+<script type="text/javascript">
+    var elevator = new Elevator(10,10,1,1);
+
+    $('.put-up').click(function(){
+        $(this).addClass('orange');
+        $(this).attr('data-type',1);
+
+        elevator.judge();
+    });
+    //下楼按钮
+    $('.put-down').click(function(){
+        $(this).addClass('orange');
+        $(this).attr('data-type',1);
+
+        elevator.judge();
+    });
+    //楼层选择
+    $('.btn-wantto').click(function(){
+        $(this).addClass('orange');
+        var num = $(this).data('dt');
+        alert(num);
+    });
+
+</script>
+</body>
+</html>
