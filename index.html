@@ -28,7 +28,7 @@
             color:orange;
         }
         .btn-sp{
-            margin-left: 69px;
+            margin-left: 47px;
             border:1px solid;
             border-radius: 50px;
         }
@@ -134,12 +134,12 @@
                 </li>
             </ul>
             <div class="col-md-3 column" style="margin-top: 20px;">
-                <ul class="list-group">
-                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="1">&nbsp;1&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="2">&nbsp;2&nbsp;</span></li>
-                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="3">&nbsp;3&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="4">&nbsp;4&nbsp;</span></li>
-                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="5">&nbsp;5&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="6">&nbsp;6&nbsp;</span></li>
-                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="7">&nbsp;7&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="8">&nbsp;8&nbsp;</span></li>
-                    <li class="list-group-item"><span class="btn-sp center btn-wantto" data-dt="9">&nbsp;9&nbsp;</span><span class="btn-sp center btn-wantto" data-dt="10">10&nbsp;</span></li>
+                <ul class="list-group wangto">
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto to1" data-tag="1" data-type="0">&nbsp;1&nbsp;</span><span class="btn-sp center btn-wantto to2" data-tag="2" data-type="0">&nbsp;2&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto to1" data-tag="3" data-type="0">&nbsp;3&nbsp;</span><span class="btn-sp center btn-wantto to2" data-tag="4" data-type="0">&nbsp;4&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto to1" data-tag="5" data-type="0">&nbsp;5&nbsp;</span><span class="btn-sp center btn-wantto to2" data-tag="6" data-type="0">&nbsp;6&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto to1" data-tag="7" data-type="0">&nbsp;7&nbsp;</span><span class="btn-sp center btn-wantto to2" data-tag="8" data-type="0">&nbsp;8&nbsp;</span></li>
+                    <li class="list-group-item"><span class="btn-sp center btn-wantto to1" data-tag="9" data-type="0">&nbsp;9&nbsp;</span><span class="btn-sp center btn-wantto to2" data-tag="10" data-type="0">10&nbsp;</span></li>
                 </ul>
             </div>
         </div>
@@ -151,19 +151,18 @@
 <script type="text/javascript" src="elevator.js"></script>
 
 <script type="text/javascript">
-    var elevator = new Elevator(10,10,1,1);
+    var elevator = new Elevator(10,10,1);
 
     $('.put-up').click(function(){
         var type = $(this).attr('data-type');
         if(type == 0) {
             $(this).addClass('orange');
             $(this).attr('data-type', '1');
-            elevator.judge();
         }else{
             $(this).removeClass('orange');
             $(this).attr('data-type', '0');
-            elevator.judge();
         }
+        elevator.judge();
     });
     //下楼按钮
     $('.put-down').click(function(){
@@ -171,18 +170,24 @@
         if(type == 0) {
             $(this).addClass('orange');
             $(this).attr('data-type', '1');
-            elevator.judge();
         }else{
             $(this).removeClass('orange');
             $(this).attr('data-type', '0');
-            elevator.judge();
         }
+        elevator.judge();
     });
     //楼层选择
     $('.btn-wantto').click(function(){
-        $(this).addClass('orange');
-        var num = $(this).data('dt');
-        alert(num);
+        var type = $(this).attr('data-type');
+        if(type == 0) {
+            $(this).addClass('orange');
+            $(this).attr('data-type', '1');
+        }
+        else{
+            $(this).removeClass('orange');
+            $(this).attr('data-type', '0');
+        }
+        elevator.judge();
     });
 
 </script>
